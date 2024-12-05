@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Siroko Quiz</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="scripts/script.js"></script>
+    </head>
+    <body>
+        <!-- Main Container -->
+        <div class="container flex fd-col">
+            <div class="container-logo"></div>
+            <div class="chip" id="chip"></div>
+            <div class="container-title"><h1>¡VAMOS ALLÁ!</h1></div>
+            <p class="subtitle">Has llegado hasta el test de Siroko. Responde las siguientes preguntas y genera tu código premiado a medida. </p>
+            <div class="card">
+                <form id="couponForm" class="form flex fd-col" action="https://www.siroko.com/es/" target="_blank" method="post">
+                    <h1 class="form-title" id="form-title"></h1>
+                    <!-- First Tab -->
+                    <div class="tab fd-col">
+                        <div class="form-group flex fd-col years"></div> <!-- See Function buildForm() to popolate -->
+                        <button type="button" class="form-button flex year-button">Siguiente
+                            <span class="material-icons">arrow_forward</span>
+                        </button>
+                    </div>
+                    <!-- Second Tab -->
+                    <div class="tab fd-col">
+                        <div class="form-group flex fd-col gafas"></div> <!-- See Function buildForm() to popolate -->
+                        <button type="button" class="form-button flex gafa-button">Siguiente
+                            <span class="material-icons">arrow_forward</span>
+                        </button>
+                    </div>
+                    <!-- Last Tab -->
+                    <div class="tab fd-col">
+                        <div class="coupon-container flex">
+                            <p class="coupon" id="coupon"></p>
+                            <div class="copy-button" ><span id="copy-text">Copiar</span></div>
+                        </div>
+                        <div class="timer-container timer-running flex" id="timer-container">
+                            <span class="material-icons">access_alarm</span>                   
+                            <span id="timer">20:00</span>
+                        </div>
+                        <p class="info-coupon">
+                            Introduce este código en tu próxima compra para conseguir tu premio.¡Disponible durante 20 minutos!
+                        </p>
+                        <button  class="form-button flex goto">Ir a siroko.com
+                            <span class="material-icons">arrow_right_alt </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <p>2016-2021 Siroko Solutions S.L.<p>
+            <p> Todos los derechos reservados. <a href="#">Ver bases</a>.</p>
+        </footer>
+    </body>
+</html>

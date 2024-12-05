@@ -1,0 +1,286 @@
+/* Variables */
+:root {
+  --bg-gradient: linear-gradient(to bottom, #740001, #360001);
+  --black-color: #000000;
+  --chip-color: #5DC2BD;
+  --card-color: #311429;
+  --card-red-color: #C51414;
+  --card-dark-color: #2C0C23;
+  --text-color: #ffffff;
+  --text-dark-green: #2C5E5B;
+  --text-yellow: #EFE5C3;
+  --text-light-grey: #BBBBBB;
+  --button-green: #339B95;
+  --active-color: #C92F58;
+  --radio-color: #452542;
+  --small-gap: 10px;
+  --font-inconsolata: "Inconsolata", monospace;
+  --font-inter: "Inter", sans-serif;
+}
+
+@font-face {
+  font-family: 'LiberatorSIROKO';
+  src: url(../font/LiberatorSIROKO-Heavy.ttf);
+}
+/* End Variables */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-image:url('../images/background.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100vw;
+    height: 100vh;
+}
+/* Main Container */
+.container {
+  align-items: start;
+  justify-content: center;
+  gap: 25px;
+  color: var(--text-color);
+  .container-logo{
+    min-width: 32px;
+    min-height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .chip {
+    background-color: var(--chip-color);
+    color: var(--text-dark-green);
+    font-family: var(--font-inter);
+    font-weight: 700;
+    font-size: 9px;
+    padding: 3px 7px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  .container-title{
+    color: var(--text-color);
+    font-family: 'LiberatorSIROKO';
+    font-size: 35px;
+    line-height: 35px;
+  }
+  .subtitle {
+    font-family: var(--font-inconsolata);
+    font-size: 16px;
+    line-height: 18.72px;
+  }
+  .card {
+    background-color: var(--card-color);
+    border-radius: 3px;
+    padding: 20px;
+    gap: var(--small-gap);
+    width: 100%;
+    .form{
+      gap: var(--small-gap);
+      .form-title{
+        font-family: var(--font-inter);
+        font-weight: 700;
+        color: var(--text-yellow);
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+      .tab{
+        display: none;
+        gap: var(--small-gap);
+        .coupon-container{
+          justify-content: space-between;
+          padding: 10px;
+          border-radius: 2px;
+          background: linear-gradient(-.25turn, var(--text-color), #BDBDBD);
+          .coupon{
+            font-family: var(--font-inconsolata);
+            font-size: 25px;
+            font-weight: 700;
+            line-height: 29.25px;
+            text-align: left;
+            color: var(--black-color)
+          }
+          .copy-button{
+            background-color: transparent;
+            border: solid 2px var(--black-color);
+            font-family: var(--font-inconsolata);
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16.38px;
+            color: var(--black-color);
+            padding: 5px 10px;
+            cursor: pointer;
+          }
+        }
+        .timer-container{
+          color: var(--text-color);
+          font-family: var(--font-inconsolata);
+          font-weight: 700;
+          padding: 10px 15px;
+          border-radius: 3px;
+          gap: var(--small-gap);
+          justify-content: start;
+          align-items: center;
+        }
+        .info-coupon{
+          font-family: var(--font-inconsolata);
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 18.72px;
+          text-align: left;
+          color: var(--text-color);
+        }
+      .form-group {
+        gap: var(--small-gap);
+        .form-radio {
+          align-items: center;
+          background-color: var(--radio-color); 
+          border-radius: 4px;
+          cursor: pointer;
+          color: var(--text-color);
+          transition: background-color 0.3s ease;
+          padding: 12px;
+          gap: var(--small-gap);
+          input {
+            color: var(--text-color);
+          }
+          input:checked:after{
+            padding: 1px;
+            width: 11px;
+            height: 11px;
+            border-radius: 11px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: var(--text-color);
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 1px solid var(--text-color);
+          }
+          span {
+            flex-grow: 1;
+            color: var(--text-color);
+            font-family: var(--font-inconsolata);
+            font-size: 15px;
+          }
+        }
+        .active {
+            background-color: var(--active-color); 
+          }
+      }
+      .form-button{
+        background-color: var(--button-green);
+        padding: 12px;
+        gap: var(--small-gap);
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+        justify-content: center;
+        font-family: var(--font-inter);
+        color: var(--text-color);
+        align-items: center;
+      }
+    }
+    }
+  }
+}
+/* End Main Container */
+
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--small-gap);
+  background-color: var(--black-color);
+  font-family: var(--font-inconsolata);
+  font-weight: 400;
+  width: 100%;
+  font-size: 14px;
+  padding: 25px;
+  p{
+      color: var(--text-light-grey) !important;
+  }
+  a{
+    color: var(--text-color);
+    font-weight: bold;
+  }
+}
+/* End Footer */
+
+/* Utils */
+.flex {
+  display: flex !important;
+}
+.fd-col {
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.timer-expired {
+  background-color: var(--card-red-color);
+  font-size: 16px;
+  line-height: 18.72px;
+  .white-link{
+    color: var(--text-color);
+  }
+}
+.timer-running{
+  background-color: var(--card-dark-color);
+  font-size: 27px;
+  line-height: 31.59px;
+}
+/* Helper: This class was created just to prevent coupon copying */
+.select-none{
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  user-select:none;
+}
+/* End Utils */
+
+/* Media Query */
+@media (min-width:375px)  { 
+  body {
+    padding: 25px
+  }
+  footer{
+    padding: 25px;
+  }
+  .container-logo{
+    background-image:url('../images/logo_small.png') ;
+  }
+}
+@media (min-width:834px)  { 
+  body {
+    padding: 35px
+  }
+  footer{
+    padding: 35px;
+  }
+  .container-logo{
+    background-image:url('../images/logo_small.png') ;
+  }
+}
+@media (min-width:1440px)  { 
+  body{
+    padding: 50px 250px;
+  }
+  footer{
+    padding: 50px 250px;
+  }
+  .container-logo{
+    width: 145px;
+    height: 35px;
+    background-image:url('../images/logo_large.png') ;
+  }
+}
+/* End Media Query */
